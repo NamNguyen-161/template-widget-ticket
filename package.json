@@ -4,8 +4,8 @@
   "description": "Template widget for mint ticket",
   "scripts": {
     "rollup": "rollup -c",
-    "storybook": "start-storybook -p 6006 -s ./src",
-    "build-storybook": "build-storybook  -s ./src"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook "
   },
   "keywords": [],
   "author": "NamNguyenVan",
