@@ -1,2 +1,2 @@
-export { default as ProgressBar } from "./processBar";
+export { default } from "./processBar";
 export * from "./styles";
