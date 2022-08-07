@@ -18,7 +18,7 @@ export const CustomButton = styled.button<StyleCustomBtnProps>`
   color: ${(props) => `${props.color}`};
   cursor: pointer;
   border: none;
-  transition: all 0.2s;
+  transition: all 0.2s easy;
 
   &:disabled {
     ${darken(0.5)}

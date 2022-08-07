@@ -1,6 +1,6 @@
-export { default as Button } from "./Button";
 export { default as Wrapper } from "./Wrapper";
-export { default as ProcessBar } from "./ProcessBar";
-export * from "./Text";
+export { default as ItemChooseTicket } from "./ItemChooseTicket";
+export { default as ProgressBar } from "./ProcessBar";
+export { default as Button } from "./Button";
 export * from "./styles";
-export * from "./types";
+export * from "./Text";

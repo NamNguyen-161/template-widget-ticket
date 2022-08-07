@@ -38,6 +38,11 @@ const ProgressBarComponent = (props: IProgressBarComponentProps) => {
     }
   };
 
+  const addStyles = (index: number) => {
+    if (index === 0) return { paddingLeft: "15px" };
+    return { paddingRight: "35px" };
+  };
+
   return (
     <ProgressBar
       height={2}
@@ -57,7 +62,11 @@ const ProgressBarComponent = (props: IProgressBarComponentProps) => {
                 <CircleIndexProcess accomplished={accomplished}>
                   {index + 1}
                 </CircleIndexProcess>
-                <TextProcess accomplished={accomplished} color="white">
+                <TextProcess
+                  accomplished={accomplished}
+                  color="white"
+                  style={addStyles(index)}
+                >
                   {textProcess(index)}
                 </TextProcess>
               </>
