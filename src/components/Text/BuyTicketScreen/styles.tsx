@@ -37,3 +37,34 @@ export const MainLabel = styled.p<Omit<StyleCustomBtnProps, "backgroundColor">>`
   line-height: 22px;
   color: ${(props) => props.color};
 `;
+
+export const TicketName = styled.p<
+  Omit<StyleCustomBtnProps, "backgroundColor">
+>`
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: ${(props) => props.color};
+  display: flex;
+  align-items: center;
+  height: 100%;
+`;
+
+export const ExistingTicket = styled.span`
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+`;
+
+export const ExistingLabel = styled(ExistingTicket)<
+  Omit<StyleCustomBtnProps, "backgroundColor">
+>`
+  color: ${(props) => props.color};
+  opacity: 0.6;
+`;
+
+export const ExistingNumber = styled(ExistingTicket)`
+  opacity: 1;
+  font-weight: bold;
+`;

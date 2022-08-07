@@ -1,8 +1,12 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import typescript from "@rollup/plugin-typescript";
+// import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
+import image from "@rollup/plugin-image";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import typescript from "rollup-plugin-typescript2";
 
 const packageJson = require("./package.json");
 
@@ -26,12 +30,16 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss(),
+      image(),
+      // nodeResolve({ browser: true }),
+      peerDepsExternal(),
+      // typescript({ useTsconfigDeclarationDir: true }),
     ],
   },
   {
     input: "dist/esm/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
-    external: [/\.(css|less|scss)$/],
+    external: [/\.(css|less|scss)$/, "styled-components", "react", "react-dom"],
   },
 ];
